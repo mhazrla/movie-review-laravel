@@ -9,7 +9,7 @@
                 </div>
             </div>
 
-            <div class="my-8 hero min-h-screen px-0">
+             <div class="my-8 hero min-h-screen px-0" style="background-image: url({{ URL::asset('hero.png') }}) ;">
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-center text-neutral-content">
                     <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-24">
