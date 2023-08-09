@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Str;
 class AdminSeeder extends Seeder
 {
     /**
@@ -15,9 +15,10 @@ class AdminSeeder extends Seeder
     public function run(): void
     {
         DB::table('users')->insert([
-            [
-                'id' => \Ramsey\Uuid\Uuid::uuid4()->toString(),
-                'name' => "Administrator",
+		[
+			'uuid' => Str::random(),
+			'name' => "Administrator",
+			'role' => 1,
                 'email' => "admin@gmail.com",
                 'password' => bcrypt("password"),
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
