@@ -29,9 +29,6 @@
                         <x-nav-link :href="route('/')" :active="request()->routeIs('/')">
                             {{ __('Home') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('/origin')" :active="request()->routeIs('/origin')">
-                            {{ __('Origin') }}
-                        </x-nav-link>
                         <x-nav-link :href="route('/genre')" :active="request()->routeIs('/genre')">
                             {{ __('Genre') }}
                         </x-nav-link>
@@ -124,9 +121,6 @@
             @guest
                 <x-responsive-nav-link :href="route('/')" :active="request()->routeIs('/')">
                     {{ __('Home') }}
-                </x-responsive-nav-link>
-                <x-responsive-nav-link :href="route('/origin')" :active="request()->routeIs('/origin')">
-                    {{ __('Origin') }}
                 </x-responsive-nav-link>
                 <x-responsive-nav-link :href="route('/genre')" :active="request()->routeIs('/genre')">
                     {{ __('Genre') }}

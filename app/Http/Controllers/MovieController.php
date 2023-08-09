@@ -19,14 +19,6 @@ class MovieController extends Controller
         return view('homepage', compact(['reviews']));
     }
 
-    public function origin()
-    {
-        $indoMovies = Movie::where('origin', 0)->latest()->with(['review'])->get();
-        $westernMovies = Movie::where('origin', 1)->latest()->with(['review'])->get();
-
-        return view('origin', compact(['indoMovies', 'westernMovies']));
-    }
-
     public function genre()
     {
         $genres = Genre::latest()->get();

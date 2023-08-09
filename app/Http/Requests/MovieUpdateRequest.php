@@ -27,7 +27,6 @@ class MovieUpdateRequest extends FormRequest
             'tahun' => 'required',
             'sinopsis' => 'required',
             'genre_id'  => 'required|exists:genres,id',
-            'origin' => 'required',
         ];
     }
 }

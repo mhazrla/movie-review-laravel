@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('tahun');
             $table->string('thumbnail');
             $table->text('sinopsis');
-            $table->boolean('origin');
             $table->uuid('genre_id');
             $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
             $table->timestamps();

@@ -92,51 +92,21 @@
                             <div class="w-full px-2 md:w-1/2">
 
                                 <div class="mb-6">
-
-                                    <label for="origin"
-                                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Origin</label>
-                                    <select id="origin" name="origin"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                        <option disabled>Choose origin</option>
-                                        <option value="0" @if ($movie->origin === 0) selected @endif>
-                                            Indonesia</option>
-                                        <option value="1" @if ($movie->origin === 1) selected @endif>Western
-                                        </option>
-                                    </select>
+                                    <label for="thumbnail" class="block mb-2 text-sm font-medium ">Upload Image</label>
+                                    <input
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        id="thumbnail" type="file" name="thumbnail">
 
                                     <div class="my-2 ">
-                                        @error('origin')
+                                        @error('thumbnail')
                                             <span class="text-red-600 text-sm">{{ $message }}</span>
                                         @enderror
                                     </div>
-                                    {{-- <label for="tags" class="block mb-2 text-sm font-medium ">Tags</label>
-                                    <input type="text" id="tags" name="tags"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                        placeholder="Tags" value="{{ old('tags') }}">
-                                    <span class="text-xs text-gray-400">Separated by crash (#)</span>
-
-                                    <div class="my-2 ">
-                                        @error('tags')
-                                            <span class="text-red-600 text-sm">{{ $message }}</span>
-                                        @enderror
-                                    </div> --}}
                                 </div>
                             </div>
 
                         </div>
                         <img class="rounded-lg" width="20%" src="{{ url('/storage/' . $movie->thumbnail) }}">
-                        <div class="flex flex-wrap">
-                            <label for="thumbnail" class="block mb-2 text-sm font-medium ">Upload Image</label>
-                            <input
-                                class="block w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 cursor-pointer dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                                id="thumbnail" type="file" name="thumbnail">
-
-                            <div class="my-2 ">
-                                @error('thumbnail')
-                                    <span class="text-red-600 text-sm">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
 
                         <div class="flex flex-wrap">
                             <div class="w-full">

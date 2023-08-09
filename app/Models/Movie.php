@@ -17,7 +17,6 @@ class Movie extends Model
         'tahun',
         'sutradara',
         'thumbnail',
-        'origin',
     ];
 
     public function review()

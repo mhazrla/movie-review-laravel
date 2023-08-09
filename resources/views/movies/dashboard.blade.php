@@ -33,8 +33,8 @@
                                                 @endif
                                                 <div class="px-3 py-2">
                                                     <a href="{{ route('movie.show', $movie->id) }}"
-                                                        class="text-2xl font-semibold text-gray-700 dark:text-gray-200">
-                                                        {{ ucwords($movie->title) }}
+                                                        class="text-xl font-semibold text-gray-700 dark:text-gray-200">
+                                                        {{ ucwords($movie->judul) }}
                                                     </a>
 
                                                     <p class="my-1 font-light text-sm">{{ $movie->genre->nama }}</p>
